@@ -1,4 +1,6 @@
-﻿namespace Korat_Framework.Behaviors
+﻿using System.Collections;
+
+namespace Korat_Framework.Behaviors
 {
     public enum AppVersions
     {

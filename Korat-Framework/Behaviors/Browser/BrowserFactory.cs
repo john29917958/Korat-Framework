@@ -1,30 +1,31 @@
 ﻿using System;
+using Korat_Framework.Resources;
 using Ncu.Oolab.Korat.Library;
 
 namespace Korat_Framework.Behaviors.Browser
 {
     public class BrowserFactory : Factory<BrowserBehaviors>
     {
-        public override BrowserBehaviors Make(Korat korat, AppVersions appVersion)
+        public override BrowserBehaviors Make(Korat korat, BrowserImages images, AppVersions appVersion)
         {
             BrowserBehaviors browserBehaviors = new BrowserBehaviors(korat);
 
             switch (appVersion)
             {
                 case AppVersions.Chrome0_2_149:
-                    browserBehaviors.LanuchUrl = new Chrome.LaunchUrlBehavior(korat, "url");
+                    browserBehaviors.LanuchUrl = new Chrome.LaunchUrlBehavior(korat, images, "url");
                     browserBehaviors.ToPreviousPage = new PrevPageBehavior(korat, "chrome-prev-icon.png");
                     return browserBehaviors;
                 case AppVersions.Chrome60_0:
-                    browserBehaviors.LanuchUrl = new Chrome.LaunchUrlBehavior(korat, "url");
+                    browserBehaviors.LanuchUrl = new Chrome.LaunchUrlBehavior(korat, images, "url");
                     browserBehaviors.ToPreviousPage = new PrevPageBehavior(korat, "chrome-new-prev-icon-new.png");
                     return browserBehaviors;
                 case AppVersions.IE7:
-                    browserBehaviors.LanuchUrl = new IE.LaunchUrlBehavior(korat, "test", "url");
+                    browserBehaviors.LanuchUrl = new IE.LaunchUrlBehavior(korat, images, "test", "url");
                     browserBehaviors.ToPreviousPage = new PrevPageBehavior(korat, "ie-prev-icon.png");
                     return browserBehaviors;
                 case AppVersions.IE8:
-                    browserBehaviors.LanuchUrl = new IE.LaunchUrlBehavior(korat, "test", "url");
+                    browserBehaviors.LanuchUrl = new IE.LaunchUrlBehavior(korat, images, "test", "url");
                     browserBehaviors.ToPreviousPage = new PrevPageBehavior(korat, "new-ie-prev-icon.png");
                     return browserBehaviors;
                 default:

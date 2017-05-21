@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Korat_Framework.Resources;
 using Ncu.Oolab.Korat.Library;
 
 namespace Korat_Framework.Behaviors.Browser.IE
@@ -8,7 +9,7 @@ namespace Korat_Framework.Behaviors.Browser.IE
     {
         private readonly string _urlBar;
 
-        public LaunchUrlBehavior(Korat korat, string url, string urlBar) : base(korat, url)
+        public LaunchUrlBehavior(Korat korat, BrowserImages images, string url, string urlBar) : base(korat, images, url)
         {
             if (string.IsNullOrWhiteSpace(urlBar))
             {
