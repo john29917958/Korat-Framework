@@ -1,20 +1,26 @@
 ﻿using System;
 using Ncu.Oolab.Korat.Library;
 
-namespace Korat_Framework.Behaviors
+namespace KoratFramework.Behaviors
 {
-    public abstract class Behaviors
+    public abstract class Behaviors<TImage>
     {
-        protected Korat Korat;
+        public abstract string Version { get; }
+        public string HostInfo { get; protected set; }
 
-        protected Behaviors(Korat korat)
+        protected Korat Korat;
+        protected TImage Images;
+
+        protected Behaviors(Korat korat, string hostInfo)
         {
             if (korat == null)
             {
-                throw new ArgumentNullException("Given Korat instance should not be null.");
+                throw new ArgumentNullException();
             }
 
-            Korat = korat;
+            HostInfo = hostInfo;
         }
+
+        protected abstract TImage Load();
     }
 }
