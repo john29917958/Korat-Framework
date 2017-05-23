@@ -1,7 +1,11 @@
 # Korat-Framework
 For designing the Korat framework.
 
-About how easily replace behaviors and images, please look at "App/Program.cs":
+## Analysis
+The potential changes in every Korat automation project are listed [here](https://hackmd.io/s/HkMt6GogW#possible-changes).
+
+## Demonstration
+About how to easily replace behaviors and images, please look at "App/Program.cs":
 ```csharp
 class Program
 {
