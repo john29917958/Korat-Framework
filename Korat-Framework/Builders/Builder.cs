@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Korat_Framework.Builders
+namespace KoratFramework.Builders
 {
     public abstract class Builder<T> where T : Builder<T>
     {

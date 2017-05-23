@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Korat_Framework.Behaviors.Factories;
-using Korat_Framework.Builders.Os;
+using KoratFramework.Builders.Os;
+using KoratFramework.Factories.Behaviors;
 
-namespace Korat_Framework.Builders.Browsers
+namespace KoratFramework.Builders.Browsers
 {
     public class ChromeBuilder : Builder<UbuntuBuilder>
     {

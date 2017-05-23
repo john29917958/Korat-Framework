@@ -1,10 +1,11 @@
 ﻿using System;
 using Ncu.Oolab.Korat.Library;
 
-namespace Korat_Framework.Behaviors
+namespace KoratFramework.Behaviors
 {
     public abstract class Behaviors
     {
+        public abstract string Version { get; }
         protected Korat Korat;
 
         protected Behaviors(Korat korat)
@@ -13,7 +14,7 @@ namespace Korat_Framework.Behaviors
             {
                 throw new ArgumentNullException("Given Korat instance should not be null.");
             }
-
+            
             Korat = korat;
         }
     }

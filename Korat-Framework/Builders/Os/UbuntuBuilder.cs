@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Korat_Framework.Builders.Os
+namespace KoratFramework.Builders.Os
 {
     public class UbuntuBuilder : Builder<UbuntuBuilder>
     {
