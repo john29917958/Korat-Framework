@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Behaviors\Behaviors.cs" />
     <Compile Include="Behaviors\Browsers\BrowserBehaviors.cs" />
+    <Compile Include="Behaviors\Browsers\Chrome\ChromeBehaviors.cs" />
     <Compile Include="Factories\Behaviors\BrowserFactory.cs" />
     <Compile Include="Factories\Resource\ChromeImageFactory.cs" />
     <Compile Include="Factories\Resource\IeImageFactory.cs" />

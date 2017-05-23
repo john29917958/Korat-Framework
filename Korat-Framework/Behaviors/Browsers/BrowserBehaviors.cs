@@ -9,5 +9,26 @@ namespace KoratFramework.Behaviors.Browsers
         {
 
         }
+
+        public virtual void FocusUrlBar()
+        {
+            Korat.Click(Images.UrlBarIcon);
+        }
+
+        public virtual void LaunchUrl(string url)
+        {
+            FocusUrlBar();
+            Korat.SendString(url);
+        }
+
+        public virtual void ToNextPage()
+        {
+            Korat.Click(Images.NextButton);
+        }
+
+        public virtual void ToPrevPage()
+        {
+            Korat.Click(Images.PrevButton);
+        }
     }
 }
