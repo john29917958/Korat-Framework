@@ -18,6 +18,7 @@ namespace KoratFramework.Behaviors
                 throw new ArgumentNullException();
             }
 
+            Korat = korat;
             HostInfo = hostInfo;
         }
 
