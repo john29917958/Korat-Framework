@@ -16,8 +16,6 @@ namespace KoratFramework.Factories.Behaviors
             {
                 throw new ArgumentNullException("Given Korat instance should not be null.");
             }
-
-            Korat = korat;
         }
 
         public override BrowserBehaviors Make(string version)

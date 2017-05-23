@@ -43,14 +43,7 @@
   <ItemGroup>
     <Compile Include="Behaviors\Behaviors.cs" />
     <Compile Include="Behaviors\Browsers\BrowserBehaviors.cs" />
-    <Compile Include="Behaviors\Browsers\Chrome\ChromeBehaviors.cs" />
-    <Compile Include="Behaviors\Browsers\Chrome\ChromeBehaviorsV60.cs" />
-    <Compile Include="Behaviors\Browsers\Ie\Edge.cs" />
-    <Compile Include="Behaviors\Browsers\Ie\IeBehaviors.cs" />
     <Compile Include="Factories\Behaviors\BrowserFactory.cs" />
-    <Compile Include="Builders\Browsers\ChromeBuilder.cs" />
-    <Compile Include="Builders\Builder.cs" />
-    <Compile Include="Builders\Os\UbuntuBuilder.cs" />
     <Compile Include="Factories\Resource\ChromeImageFactory.cs" />
     <Compile Include="Factories\Resource\IeImageFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,9 +56,6 @@
       <Name>Stub</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Behaviors\Factories\" />
-    <Folder Include="Behaviors\OS\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
