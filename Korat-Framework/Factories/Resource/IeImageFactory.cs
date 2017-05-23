@@ -3,7 +3,7 @@ using KoratFramework.Resources.Browser;
 
 namespace KoratFramework.Factories.Resource
 {
-    public class IeFactory : Factory<BrowserImages>
+    public class IeImageFactory : Factory<BrowserImages>
     {
         public override BrowserImages Make(string app)
         {
