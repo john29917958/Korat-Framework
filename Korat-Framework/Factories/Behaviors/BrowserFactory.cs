@@ -16,6 +16,8 @@ namespace KoratFramework.Factories.Behaviors
             {
                 throw new ArgumentNullException("Given Korat instance should not be null.");
             }
+
+            Korat = korat;
         }
 
         public override BrowserBehaviors Make(string version)
@@ -24,30 +26,34 @@ namespace KoratFramework.Factories.Behaviors
             {
                 version = version.Replace("Chrome", string.Empty).Trim();
 
-                switch (version)
+                if (version.Contains("0.2.149"))
                 {
-                    case "0.2.149":
-                        return new ChromeBehaviors(Korat, version);
-                    case "60.0":
-                        return new ChromeBehaviorsV60(Korat, version);
-                    default:
-                        throw new ArgumentOutOfRangeException("Not specified app version.");
+                    return new ChromeBehaviors(Korat, version);
                 }
+
+                if (version.Contains("60.0"))
+                {
+                    return new ChromeBehaviorsV60(Korat, version);
+                }
+
+                throw new ArgumentOutOfRangeException("Not specified app version.");
             }
 
             if (version.Contains("IE"))
             {
                 version = version.Replace("IE", string.Empty).Trim();
 
-                switch (version)
+                if (version.Contains("7"))
                 {
-                    case "7":
-                        return new IeBehaviors(Korat, version);
-                    case "edge":
-                        return new Edge(Korat, version);
-                    default:
-                        throw new ArgumentOutOfRangeException("Not specified app version.");
+                    return new IeBehaviors(Korat, version);
                 }
+
+                if (version.Contains("edge"))
+                {
+                    return new Edge(Korat, version);
+                }
+
+                throw new ArgumentOutOfRangeException("Not specified app version.");
             }
 
             throw new ArgumentOutOfRangeException("Not specified app version.");

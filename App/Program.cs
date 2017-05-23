@@ -10,7 +10,7 @@ namespace App
         {
             Korat korat = new Korat();
 
-            BrowserBehaviors behaviors = new BrowserBehaviorFactory(korat).Make("Chrome 60.0");
+            BrowserBehaviors behaviors = new BrowserBehaviorFactory(korat).Make("Chrome 60.0 ubuntu_16.04");
         }
     }
 }
