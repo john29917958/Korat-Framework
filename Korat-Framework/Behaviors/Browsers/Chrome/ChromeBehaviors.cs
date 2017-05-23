@@ -8,14 +8,14 @@ namespace KoratFramework.Behaviors.Browsers.Chrome
     {
         public override string Version => "0.2.149";
 
-        public ChromeBehaviors(Korat korat) : base(korat)
+        public ChromeBehaviors(Korat korat, string hostInfo) : base(korat, hostInfo)
         {
             Images = Load();
         }
 
         protected sealed override BrowserImages Load()
         {
-            return new ChromeImageFactory().Make(Version + "ubuntu_16.04");
+            return new ChromeImageFactory().Make(HostInfo);
         }
     }
 }

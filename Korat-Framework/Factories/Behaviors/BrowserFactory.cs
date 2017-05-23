@@ -27,9 +27,9 @@ namespace KoratFramework.Factories.Behaviors
                 switch (version)
                 {
                     case "0.2.149":
-                        return new ChromeBehaviors(Korat);
+                        return new ChromeBehaviors(Korat, version);
                     case "60.0":
-                        return new ChromeBehaviorsV60(Korat);
+                        return new ChromeBehaviorsV60(Korat, version);
                     default:
                         throw new ArgumentOutOfRangeException("Not specified app version.");
                 }
@@ -42,9 +42,9 @@ namespace KoratFramework.Factories.Behaviors
                 switch (version)
                 {
                     case "7":
-                        return new IeBehaviors(Korat);
+                        return new IeBehaviors(Korat, version);
                     case "edge":
-                        return new Edge(Korat);
+                        return new Edge(Korat, version);
                     default:
                         throw new ArgumentOutOfRangeException("Not specified app version.");
                 }

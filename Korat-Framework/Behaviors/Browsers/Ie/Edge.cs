@@ -7,7 +7,7 @@ namespace KoratFramework.Behaviors.Browsers.Ie
     {
         public override string Version => "edge";
 
-        public Edge(Korat korat) : base(korat)
+        public Edge(Korat korat, string hostInfo) : base(korat, hostInfo)
         {
 
         }

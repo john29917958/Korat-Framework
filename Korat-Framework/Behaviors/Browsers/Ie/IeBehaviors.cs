@@ -8,14 +8,14 @@ namespace KoratFramework.Behaviors.Browsers.Ie
     {
         public override string Version => "7";
 
-        public IeBehaviors(Korat korat) : base(korat)
+        public IeBehaviors(Korat korat, string hostInfo) : base(korat, hostInfo)
         {
             Images = Load();
         }
         
         protected sealed override BrowserImages Load()
         {
-            return new IeImageFactory().Make(Version + "win7");
+            return new IeImageFactory().Make(HostInfo);
         }
     }
 }

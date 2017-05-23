@@ -5,7 +5,7 @@ namespace KoratFramework.Behaviors.Browsers
 {
     public abstract class BrowserBehaviors : Behaviors<BrowserImages>
     {
-        protected BrowserBehaviors(Korat korat) : base(korat)
+        protected BrowserBehaviors(Korat korat, string hostInfo) : base(korat, hostInfo)
         {
 
         }
