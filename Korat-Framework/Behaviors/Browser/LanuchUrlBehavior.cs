@@ -1,5 +1,6 @@
 ﻿using System;
 using Korat_Framework.Resources;
+using Korat_Framework.Resources.Browser;
 using Ncu.Oolab.Korat.Library;
 
 namespace Korat_Framework.Behaviors.Browser

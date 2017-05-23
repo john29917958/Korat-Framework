@@ -1,5 +1,6 @@
 ﻿using System;
 using Korat_Framework.Behaviors;
+using Korat_Framework.Resources.Browser;
 
 namespace Korat_Framework.Resources
 {

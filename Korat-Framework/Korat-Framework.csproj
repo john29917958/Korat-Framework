@@ -45,15 +45,18 @@
     <Compile Include="Behaviors\Behavior.cs" />
     <Compile Include="Behaviors\Behaviors.cs" />
     <Compile Include="Behaviors\Browser\BrowserBehaviors.cs" />
-    <Compile Include="Behaviors\Browser\BrowserFactory.cs" />
+    <Compile Include="Behaviors\Factories\BrowserFactory.cs" />
     <Compile Include="Behaviors\Browser\BrowserBehavior.cs" />
     <Compile Include="Behaviors\Browser\Chrome\LaunchUrlBehavior.cs" />
     <Compile Include="Behaviors\Browser\IE\LaunchUrlBehavior.cs" />
     <Compile Include="Behaviors\Browser\LanuchUrlBehavior.cs" />
     <Compile Include="Behaviors\Browser\PrevPageBehavior.cs" />
-    <Compile Include="Behaviors\Factory.cs" />
+    <Compile Include="Behaviors\Factories\BehaviorFactory.cs" />
+    <Compile Include="Builders\Browsers\ChromeBuilder.cs" />
+    <Compile Include="Builders\Builder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\BrowserImages.cs" />
+    <Compile Include="Resources\Browser\BrowserImages.cs" />
+    <Compile Include="Resources\Browser\IeImages.cs" />
     <Compile Include="Resources\ImageFactory.cs" />
   </ItemGroup>
   <ItemGroup>
