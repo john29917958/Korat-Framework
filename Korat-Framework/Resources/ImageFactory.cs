@@ -1,36 +1,40 @@
 ﻿using System;
-using Korat_Framework.Behaviors;
 using Korat_Framework.Resources.Browser;
 
 namespace Korat_Framework.Resources
 {
     public static class ImageFactory
     {
-        public static BrowserImages Make(AppVersions app)
+        public static BrowserImages Make(string app)
         {
             BrowserImages images = new BrowserImages();
 
-            switch (app)
+            if (app.Contains("chrome_0.2.149") && app.Contains("ubuntu_16.04"))
             {
-                case AppVersions.Chrome0_2_149:
-                    images.PrevButton = "chrome-prev.png";
-                    images.NextButton = "chrome-next.png";
-                    return images;
-                case AppVersions.Chrome60_0:
-                    images.PrevButton = "chrome60-prev.png";
-                    images.NextButton = "chrome60-next.png";
-                    return images;
-                case AppVersions.IE7:
-                    images.PrevButton = "ie7-prev.png";
-                    images.NextButton = "ie7-next.png";
-                    return images;
-                case AppVersions.IE8:
-                    images.PrevButton = "ie8-prev.png";
-                    images.NextButton = "ie8-next.png";
-                    return images;
-                default:
-                    throw new ArgumentException("Version not allowed.");
+                images.PrevButton = "chrome-early-prev-ubuntu.png";
+                images.NextButton = "chrome-early-next-ubuntu.png";
             }
+            else if (app.Contains("chrome_60.0") && app.Contains("ubuntu_16.04"))
+            {
+                images.PrevButton = "chrome-latest-prev-ubuntu.png";
+                images.NextButton = "chrome-latest-next-ubuntu.png";
+            }
+            else if (app.Contains("chrome_0.2.149") && app.Contains("windows_7"))
+            {
+                images.PrevButton = "chrome-early-prev-win7.png";
+                images.NextButton = "chrome-early-next-win7.png";
+            }
+            else if (app.Contains("chrome_60.0") && app.Contains("windows_7"))
+            {
+                images.PrevButton = "chrome-latest-prev-win7.png";
+                images.NextButton = "chrome-latest-next-win7.png";
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("Given version combination not valid.");
+            }
+
+            return images;
         }
     }
 }

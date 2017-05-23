@@ -1,7 +1,5 @@
-﻿using Korat_Framework.Behaviors;
-using Korat_Framework.Behaviors.Browser;
-using Korat_Framework.Behaviors.Factories;
-using Korat_Framework.Resources;
+﻿using Korat_Framework.Resources;
+using Korat_Framework.Resources.Browser;
 using Ncu.Oolab.Korat.Library;
 
 namespace App
@@ -11,9 +9,9 @@ namespace App
         static void Main(string[] args)
         {
             Korat korat = new Korat();
-            /*
-            BrowserImages images = ImageFactory.Make(AppVersions.Chrome0_2_149);
             
+            BrowserImages images = ImageFactory.Make("chrome_60.0 ubuntu_16.04");
+            /*
             BrowserBehaviors browserBehaviors = new BrowserBehaviorFactory().Make(korat, images, AppVersions.IE7);
             browserBehaviors.LanuchUrl.Execute();
             */
