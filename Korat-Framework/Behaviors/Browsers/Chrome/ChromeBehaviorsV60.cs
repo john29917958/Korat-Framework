@@ -1,5 +1,4 @@
-﻿using System.Windows.Forms;
-using Ncu.Oolab.Korat.Library;
+﻿using Ncu.Oolab.Korat.Library;
 
 namespace KoratFramework.Behaviors.Browsers.Chrome
 {
@@ -10,11 +9,6 @@ namespace KoratFramework.Behaviors.Browsers.Chrome
         public ChromeBehaviorsV60(Korat korat, BehaviorPool pool) : base(korat, pool)
         {
 
-        }
-
-        public override void FocusUrlBar()
-        {
-            Korat.SendKey(Keys.F6);
         }
     }
 }

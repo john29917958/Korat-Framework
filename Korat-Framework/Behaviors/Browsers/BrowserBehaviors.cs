@@ -7,7 +7,20 @@ namespace KoratFramework.Behaviors.Browsers
 {
     public abstract class BrowserBehaviors : Behaviors
     {
-        protected OsBehaviors Os;
+        protected BehaviorPool Pool;
+
+        protected OsBehaviors Os
+        {
+            get
+            {
+                OsBehaviors os = Pool.Request<OsBehaviors>();
+                if (os == null)
+                {
+                    throw new BehaviorsNotFoundException("OS behavior cannot be found from behaviors pool.");
+                }
+                return os;
+            }
+        }
 
         protected BrowserBehaviors(Korat korat, BehaviorPool pool) : base(korat)
         {
@@ -16,11 +29,7 @@ namespace KoratFramework.Behaviors.Browsers
                 throw new ArgumentNullException("Behaviors pool should not be null.");
             }
 
-            Os = pool.Request<OsBehaviors>();
-            if (Os == null)
-            {
-                throw new BehaviorsNotFoundException("OS behavior cannot be found from behaviors pool.");
-            }
+            Pool = pool;
         }
 
         public abstract void FocusUrlBar();
