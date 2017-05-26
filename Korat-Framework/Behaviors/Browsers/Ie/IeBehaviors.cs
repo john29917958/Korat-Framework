@@ -1,5 +1,4 @@
-﻿using KoratFramework.Factories.Resource;
-using KoratFramework.Resources.Browser;
+﻿using System.Windows.Forms;
 using Ncu.Oolab.Korat.Library;
 
 namespace KoratFramework.Behaviors.Browsers.Ie
@@ -8,14 +7,14 @@ namespace KoratFramework.Behaviors.Browsers.Ie
     {
         public override string Version => "7";
 
-        public IeBehaviors(Korat korat, string hostInfo) : base(korat, hostInfo)
+        public IeBehaviors(Korat korat, BehaviorPool pool) : base(korat, pool)
         {
-            Images = Load();
+
         }
-        
-        protected sealed override BrowserImages Load()
+
+        public override void FocusUrlBar()
         {
-            return new IeImageFactory().Make(HostInfo);
+            Korat.SendKey(Keys.F6);
         }
     }
 }

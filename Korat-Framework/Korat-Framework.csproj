@@ -41,18 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BehaviorPool.cs" />
     <Compile Include="Behaviors\Behaviors.cs" />
     <Compile Include="Behaviors\Browsers\BrowserBehaviors.cs" />
     <Compile Include="Behaviors\Browsers\Chrome\ChromeBehaviors.cs" />
     <Compile Include="Behaviors\Browsers\Chrome\ChromeBehaviorsV60.cs" />
     <Compile Include="Behaviors\Browsers\Ie\Edge.cs" />
     <Compile Include="Behaviors\Browsers\Ie\IeBehaviors.cs" />
-    <Compile Include="Factories\Behaviors\BrowserFactory.cs" />
-    <Compile Include="Factories\Resource\ChromeImageFactory.cs" />
-    <Compile Include="Factories\Resource\IeImageFactory.cs" />
+    <Compile Include="Behaviors\Os\OsBehaviors.cs" />
+    <Compile Include="Behaviors\Os\Ubuntu\UbuntuBehaviors.cs" />
+    <Compile Include="Behaviors\Os\Windows\WindowsBehaviors.cs" />
+    <Compile Include="Pickers\Behaviors\BehaviorsPicker.cs" />
+    <Compile Include="Pickers\Behaviors\Browser\ChromeBehaviorsPicker.cs" />
+    <Compile Include="Pickers\Behaviors\Browser\IeBehaviorsPicker.cs" />
+    <Compile Include="Pickers\Behaviors\Os\UbuntuBehaviorsPicker.cs" />
+    <Compile Include="Pickers\Behaviors\Os\WinBehaviorsPicker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\Browser\BrowserImages.cs" />
-    <Compile Include="Factories\Factory.cs" />
+    <Compile Include="Resources\BrowserImages.cs" />
+    <Compile Include="Resources\OsImages.cs" />
+    <Compile Include="Version\VersionComparer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stub\Stub.csproj">

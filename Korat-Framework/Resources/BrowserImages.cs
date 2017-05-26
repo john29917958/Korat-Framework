@@ -1,4 +1,4 @@
-﻿namespace KoratFramework.Resources.Browser
+﻿namespace KoratFramework.Resources
 {
     public class BrowserImages
     {

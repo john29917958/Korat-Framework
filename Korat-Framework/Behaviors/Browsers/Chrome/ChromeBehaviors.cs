@@ -1,5 +1,5 @@
-﻿using KoratFramework.Factories.Resource;
-using KoratFramework.Resources.Browser;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
 using Ncu.Oolab.Korat.Library;
 
 namespace KoratFramework.Behaviors.Browsers.Chrome
@@ -8,14 +8,14 @@ namespace KoratFramework.Behaviors.Browsers.Chrome
     {
         public override string Version => "0.2.149";
 
-        public ChromeBehaviors(Korat korat, string hostInfo) : base(korat, hostInfo)
+        public ChromeBehaviors(Korat korat, BehaviorPool pool) : base(korat, pool)
         {
-            Images = Load();
+            
         }
 
-        protected sealed override BrowserImages Load()
+        public override void FocusUrlBar()
         {
-            return new ChromeImageFactory().Make(HostInfo);
+            Korat.SendCompositeKeys(new HashSet<Keys> {Keys.Alt, Keys.D});
         }
     }
 }
