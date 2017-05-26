@@ -4,6 +4,9 @@ For designing the Korat framework.
 ## Analysis
 The potential changes in every Korat automation project are listed [here](https://hackmd.io/s/HkMt6GogW#possible-changes).
 
+## Arthitecture Design
+![Architecture Design](Documents/Korat-Framework-Architecture-Design.jpg)
+
 ## Demonstration
 About how to easily replace behaviors and images, please look at "App/Program.cs":
 ```csharp
