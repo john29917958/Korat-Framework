@@ -4,11 +4,11 @@ using Ncu.Oolab.Korat.Library;
 
 namespace KoratFramework.Behaviors.Os.Windows
 {
-    public class Win7 : OsBehaviors
+    public class WindowsBehaviors : OsBehaviors
     {
         public override string Version => "7";
 
-        public Win7(Korat korat) : base(korat)
+        public WindowsBehaviors(Korat korat) : base(korat)
         {
 
         }

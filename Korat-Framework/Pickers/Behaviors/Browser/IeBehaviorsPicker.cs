@@ -1,19 +1,17 @@
-﻿using KoratFramework.Behaviors.Browsers;
-using KoratFramework.Behaviors.Browsers.Ie;
-using KoratFramework.Pickers.Behaviors;
+﻿using KoratFramework.Behaviors.Browsers.Ie;
 using KoratFramework.Version;
 using Ncu.Oolab.Korat.Library;
 
-namespace KoratFramework.Pickers.Browser
+namespace KoratFramework.Pickers.Behaviors.Browser
 {
-    public class IeBehaviorsPicker : BehaviorsPicker<BrowserBehaviors>
+    public class IeBehaviorsPicker : BehaviorsPicker<IeBehaviors>
     {
         public IeBehaviorsPicker(Korat korat) : base(korat)
         {
 
         }
 
-        public override BrowserBehaviors Pick(string version)
+        public override IeBehaviors Pick(string version)
         {
             if (GreaterOrEquals(version, "ie7"))
             {

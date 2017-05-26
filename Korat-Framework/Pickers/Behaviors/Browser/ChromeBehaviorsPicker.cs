@@ -1,19 +1,17 @@
-﻿using KoratFramework.Behaviors.Browsers;
-using KoratFramework.Behaviors.Browsers.Chrome;
-using KoratFramework.Pickers.Behaviors;
+﻿using KoratFramework.Behaviors.Browsers.Chrome;
 using KoratFramework.Version;
 using Ncu.Oolab.Korat.Library;
 
-namespace KoratFramework.Pickers.Browser
+namespace KoratFramework.Pickers.Behaviors.Browser
 {
-    public class ChromeBehaviorsPicker : BehaviorsPicker<BrowserBehaviors>
+    public class ChromeBehaviorsPicker : BehaviorsPicker<ChromeBehaviors>
     {
         public ChromeBehaviorsPicker(Korat korat) : base(korat)
         {
 
         }
 
-        public override BrowserBehaviors Pick(string version)
+        public override ChromeBehaviors Pick(string version)
         {
             if (GreaterOrEquals(version, "60.0"))
             {
