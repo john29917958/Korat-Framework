@@ -17,6 +17,7 @@ namespace KoratFramework.Behaviors.Os.Windows
         {
             Korat.SendCompositeKeys(new HashSet<Keys> { Keys.Control, Keys.R });
             Korat.SendString(appName);
+            Korat.SendKey(Keys.Enter);
         }
 
         public override void OpenTerminal()
