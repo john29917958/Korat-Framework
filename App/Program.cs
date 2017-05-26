@@ -30,8 +30,7 @@ namespace App
             else
             {
                 Console.WriteLine("Before replacing behaviors:");
-                os.OpenApp("chrome");
-                string url = chrome.GetUrlText();
+                RunScript(os, chrome);
             }
 
             pool.Remove(os);
@@ -49,11 +48,21 @@ namespace App
             {
                 Console.WriteLine();
                 Console.WriteLine("After replacing behaviors:");
-                os.OpenApp("chrome");
-                string url = browser.GetUrlText();
+                RunScript(os, browser);
             }
 
             Console.Read();
+        }
+
+        /// <summary>
+        /// Script never changed.
+        /// </summary>
+        /// <param name="os"></param>
+        /// <param name="browser"></param>
+        private static void RunScript(OsBehaviors os, BrowserBehaviors browser)
+        {
+            os.OpenApp("chrome");
+            string url = browser.GetUrlText();
         }
     }
 }
