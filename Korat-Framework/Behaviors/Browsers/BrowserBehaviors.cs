@@ -1,5 +1,6 @@
 ﻿using System;
 using KoratFramework.Behaviors.Os;
+using KoratFramework.Exceptions;
 using Ncu.Oolab.Korat.Library;
 
 namespace KoratFramework.Behaviors.Browsers
@@ -16,6 +17,10 @@ namespace KoratFramework.Behaviors.Browsers
             }
 
             Os = pool.Request<OsBehaviors>();
+            if (Os == null)
+            {
+                throw new BehaviorsNotFoundException("OS behavior cannot be found from behaviors pool.");
+            }
         }
 
         public abstract void FocusUrlBar();
