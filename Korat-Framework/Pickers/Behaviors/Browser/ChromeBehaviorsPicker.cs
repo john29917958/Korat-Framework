@@ -6,7 +6,7 @@ namespace KoratFramework.Pickers.Behaviors.Browser
 {
     public class ChromeBehaviorsPicker : BehaviorsPicker<ChromeBehaviors>
     {
-        public ChromeBehaviorsPicker(Korat korat) : base(korat)
+        public ChromeBehaviorsPicker(Korat korat, BehaviorPool pool) : base(korat, pool)
         {
 
         }
@@ -15,12 +15,12 @@ namespace KoratFramework.Pickers.Behaviors.Browser
         {
             if (GreaterOrEquals(version, "60.0"))
             {
-                return new ChromeBehaviorsV60(Korat);
+                return new ChromeBehaviorsV60(Korat, Pool);
             }
 
             if (GreaterOrEquals(version, "0.2.149"))
             {
-                return new ChromeBehaviors(Korat);
+                return new ChromeBehaviors(Korat, Pool);
             }
 
             return null;

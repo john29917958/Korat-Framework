@@ -6,7 +6,7 @@ namespace KoratFramework.Pickers.Behaviors.Browser
 {
     public class IeBehaviorsPicker : BehaviorsPicker<IeBehaviors>
     {
-        public IeBehaviorsPicker(Korat korat) : base(korat)
+        public IeBehaviorsPicker(Korat korat, BehaviorPool pool) : base(korat, pool)
         {
 
         }
@@ -15,12 +15,12 @@ namespace KoratFramework.Pickers.Behaviors.Browser
         {
             if (GreaterOrEquals(version, "ie7"))
             {
-                return new IeBehaviors(Korat);
+                return new IeBehaviors(Korat, Pool);
             }
 
             if (GreaterOrEquals(version, "edge"))
             {
-                return new Edge(Korat);
+                return new Edge(Korat, Pool);
             }
 
             return null;

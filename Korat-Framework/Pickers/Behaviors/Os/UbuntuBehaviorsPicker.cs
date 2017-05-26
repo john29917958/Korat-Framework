@@ -6,7 +6,7 @@ namespace KoratFramework.Pickers.Behaviors.Os
 {
     public class UbuntuBehaviorsPicker : BehaviorsPicker<UbuntuBehaviors>
     {
-        public UbuntuBehaviorsPicker(Korat korat) : base(korat)
+        public UbuntuBehaviorsPicker(Korat korat, BehaviorPool pool) : base(korat, pool)
         {
 
         }

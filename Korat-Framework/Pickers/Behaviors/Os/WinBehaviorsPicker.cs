@@ -6,7 +6,7 @@ namespace KoratFramework.Pickers.Behaviors.Os
 {
     public class WinBehaviorsPicker : BehaviorsPicker<WindowsBehaviors>
     {
-        public WinBehaviorsPicker(Korat korat) : base(korat)
+        public WinBehaviorsPicker(Korat korat, BehaviorPool pool) : base(korat, pool)
         {
         }
 
