@@ -29,17 +29,7 @@ namespace KoratFramework.Pickers.Browser
 
         protected override bool GreaterOrEquals(string version, string benchmark)
         {
-            if (VersionComparer.GreaterEquals(version, "60.0"))
-            {
-                return true;
-            }
-
-            if (VersionComparer.GreaterEquals(version, "0.2.149"))
-            {
-                return true;
-            }
-
-            return false;
+            return VersionComparer.GreaterEquals(version, benchmark);
         }
     }
 }
