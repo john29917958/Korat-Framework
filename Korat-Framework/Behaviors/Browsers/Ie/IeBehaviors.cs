@@ -1,4 +1,5 @@
-﻿using Ncu.Oolab.Korat.Library;
+﻿using System.Windows.Forms;
+using Ncu.Oolab.Korat.Library;
 
 namespace KoratFramework.Behaviors.Browsers.Ie
 {
@@ -9,6 +10,11 @@ namespace KoratFramework.Behaviors.Browsers.Ie
         public IeBehaviors(Korat korat) : base(korat)
         {
 
+        }
+
+        public override void FocusUrlBar()
+        {
+            Korat.SendKey(Keys.F6);
         }
     }
 }

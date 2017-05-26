@@ -9,10 +9,7 @@ namespace KoratFramework.Behaviors.Browsers
 
         }
 
-        public virtual void FocusUrlBar()
-        {
-            //Korat.Click(Images.UrlBarIcon);
-        }
+        public abstract void FocusUrlBar();
 
         public virtual void LaunchUrl(string url)
         {
