@@ -18,5 +18,7 @@ namespace KoratFramework.Pickers
         }
 
         public abstract T Pick(string version);
+
+        protected abstract bool GreaterOrEquals(string version, string benchmark);
     }
 }
