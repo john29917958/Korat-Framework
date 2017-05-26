@@ -19,5 +19,7 @@ namespace KoratFramework.Behaviors.Os
         {
             Korat.SendCompositeKeys(new HashSet<Keys> { Keys.Alt, Keys.F4 });
         }
+
+        public abstract string Copy();
     }
 }

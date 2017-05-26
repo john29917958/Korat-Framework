@@ -8,7 +8,7 @@ namespace KoratFramework.Behaviors.Browsers.Chrome
     {
         public override string Version => "0.2.149";
 
-        public ChromeBehaviors(Korat korat) : base(korat)
+        public ChromeBehaviors(Korat korat, BehaviorPool pool) : base(korat, pool)
         {
             
         }

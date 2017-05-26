@@ -23,5 +23,11 @@ namespace KoratFramework.Behaviors.Os.Windows
         {
             OpenApp("cmd.exe");
         }
+
+        public override string Copy()
+        {
+            Korat.SendCompositeKeys(new HashSet<Keys> { Keys.Control, Keys.C });
+            return Clipboard.GetText();
+        }
     }
 }

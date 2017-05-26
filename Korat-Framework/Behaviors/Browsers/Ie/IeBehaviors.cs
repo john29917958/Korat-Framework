@@ -7,7 +7,7 @@ namespace KoratFramework.Behaviors.Browsers.Ie
     {
         public override string Version => "7";
 
-        public IeBehaviors(Korat korat) : base(korat)
+        public IeBehaviors(Korat korat, BehaviorPool pool) : base(korat, pool)
         {
 
         }

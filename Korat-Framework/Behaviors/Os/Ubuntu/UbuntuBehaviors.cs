@@ -24,5 +24,11 @@ namespace KoratFramework.Behaviors.Os.Ubuntu
         {
             Korat.SendCompositeKeys(new HashSet<Keys> { Keys.Control, Keys.Alt, Keys.T });
         }
+
+        public override string Copy()
+        {
+            Korat.SendCompositeKeys(new HashSet<Keys> {Keys.Control, Keys.Shift, Keys.C});
+            return Clipboard.GetText();
+        }
     }
 }
