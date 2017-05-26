@@ -48,9 +48,9 @@
     <Compile Include="Behaviors\Browsers\Chrome\ChromeBehaviorsV60.cs" />
     <Compile Include="Behaviors\Browsers\Ie\Edge.cs" />
     <Compile Include="Behaviors\Browsers\Ie\IeBehaviors.cs" />
-    <Compile Include="Pickers\BehaviorsPicker.cs" />
-    <Compile Include="Pickers\Browser\ChromeBehaviorsPicker.cs" />
-    <Compile Include="Pickers\Browser\IeBehaviorsPicker.cs" />
+    <Compile Include="Pickers\Behaviors\BehaviorsPicker.cs" />
+    <Compile Include="Pickers\Behaviors\Browser\ChromeBehaviorsPicker.cs" />
+    <Compile Include="Pickers\Behaviors\Browser\IeBehaviorsPicker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\BrowserImages.cs" />
     <Compile Include="Resources\OsImages.cs" />
@@ -65,7 +65,7 @@
   <ItemGroup>
     <Folder Include="Behaviors\Os\Ubuntu\" />
     <Folder Include="Behaviors\Os\Win7\" />
-    <Folder Include="Pickers\Os\" />
+    <Folder Include="Pickers\Behaviors\Os\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

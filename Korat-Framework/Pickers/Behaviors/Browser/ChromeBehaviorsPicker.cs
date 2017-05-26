@@ -1,5 +1,6 @@
 ﻿using KoratFramework.Behaviors.Browsers;
 using KoratFramework.Behaviors.Browsers.Chrome;
+using KoratFramework.Pickers.Behaviors;
 using KoratFramework.Version;
 using Ncu.Oolab.Korat.Library;
 

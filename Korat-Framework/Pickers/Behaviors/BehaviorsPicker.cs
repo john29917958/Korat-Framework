@@ -1,9 +1,9 @@
 ﻿using System;
 using Ncu.Oolab.Korat.Library;
 
-namespace KoratFramework.Pickers
+namespace KoratFramework.Pickers.Behaviors
 {
-    public abstract class BehaviorsPicker<T> where T : Behaviors.Behaviors
+    public abstract class BehaviorsPicker<T> where T : KoratFramework.Behaviors.Behaviors
     {
         protected Korat Korat;
 
