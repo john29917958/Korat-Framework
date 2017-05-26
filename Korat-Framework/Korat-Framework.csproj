@@ -51,6 +51,7 @@
     <Compile Include="Behaviors\Os\OsBehaviors.cs" />
     <Compile Include="Behaviors\Os\Ubuntu\UbuntuBehaviors.cs" />
     <Compile Include="Behaviors\Os\Windows\WindowsBehaviors.cs" />
+    <Compile Include="Exceptions\BehaviorsNotFoundException.cs" />
     <Compile Include="Pickers\Behaviors\BehaviorsPicker.cs" />
     <Compile Include="Pickers\Behaviors\Browser\ChromeBehaviorsPicker.cs" />
     <Compile Include="Pickers\Behaviors\Browser\IeBehaviorsPicker.cs" />
