@@ -3,15 +3,13 @@ using Ncu.Oolab.Korat.Library;
 
 namespace KoratFramework.Behaviors
 {
-    public abstract class Behaviors<TImage>
+    public abstract class Behaviors
     {
         public abstract string Version { get; }
-        public string HostInfo { get; protected set; }
 
         protected Korat Korat;
-        protected TImage Images;
 
-        protected Behaviors(Korat korat, string hostInfo)
+        protected Behaviors(Korat korat)
         {
             if (korat == null)
             {
@@ -19,9 +17,6 @@ namespace KoratFramework.Behaviors
             }
 
             Korat = korat;
-            HostInfo = hostInfo;
         }
-
-        protected abstract TImage Load();
     }
 }

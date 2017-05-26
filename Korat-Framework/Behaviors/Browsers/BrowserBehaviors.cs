@@ -1,18 +1,17 @@
-﻿using KoratFramework.Resources.Browser;
-using Ncu.Oolab.Korat.Library;
+﻿using Ncu.Oolab.Korat.Library;
 
 namespace KoratFramework.Behaviors.Browsers
 {
-    public abstract class BrowserBehaviors : Behaviors<BrowserImages>
+    public abstract class BrowserBehaviors : Behaviors
     {
-        protected BrowserBehaviors(Korat korat, string hostInfo) : base(korat, hostInfo)
+        protected BrowserBehaviors(Korat korat) : base(korat)
         {
 
         }
 
         public virtual void FocusUrlBar()
         {
-            Korat.Click(Images.UrlBarIcon);
+            //Korat.Click(Images.UrlBarIcon);
         }
 
         public virtual void LaunchUrl(string url)
@@ -23,12 +22,12 @@ namespace KoratFramework.Behaviors.Browsers
 
         public virtual void ToNextPage()
         {
-            Korat.Click(Images.NextButton);
+            //Korat.Click(Images.NextButton);
         }
 
         public virtual void ToPrevPage()
         {
-            Korat.Click(Images.PrevButton);
+            //Korat.Click(Images.PrevButton);
         }
     }
 }

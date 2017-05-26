@@ -1,6 +1,4 @@
-﻿using KoratFramework.Factories.Resource;
-using KoratFramework.Resources.Browser;
-using Ncu.Oolab.Korat.Library;
+﻿using Ncu.Oolab.Korat.Library;
 
 namespace KoratFramework.Behaviors.Browsers.Ie
 {
@@ -8,14 +6,9 @@ namespace KoratFramework.Behaviors.Browsers.Ie
     {
         public override string Version => "7";
 
-        public IeBehaviors(Korat korat, string hostInfo) : base(korat, hostInfo)
+        public IeBehaviors(Korat korat) : base(korat)
         {
-            Images = Load();
-        }
-        
-        protected sealed override BrowserImages Load()
-        {
-            return new IeImageFactory().Make(HostInfo);
+
         }
     }
 }
