@@ -13,16 +13,34 @@ class Program
     {
         Korat korat = new Korat();
 
-        BrowserBehaviors behaviors = new BrowserBehaviorFactory(korat).Make("Chrome 60.0 ubuntu_16.04");
-        behaviors.FocusUrlBar();
-        behaviors.LaunchUrl("https://www.google.com.tw/");
-        //...and so on...
+        // Constructs behavior pool by "BehaviorPool pool = Parser.Parse(args)" in the future.
+        BehaviorPool pool = new BehaviorPool();
+        pool.Add(new WinBehaviorsPicker(korat, pool).Pick("7"));
+        pool.Add(new ChromeBehaviorsPicker(korat, pool).Pick("60.0"));
 
-        BrowserBehaviors easyReplaceableBehaviors = new BrowserBehaviorFactory(korat).Make("IE edge win10");
-        easyReplaceableBehaviors.FocusUrlBar();
-        easyReplaceableBehaviors.LaunchUrl("https://www.google.com.tw/");
-        easyReplaceableBehaviors.ToPrevPage();
-        //...and so on...
+        ChromeBehaviors chrome = pool.Request<ChromeBehaviors>();
+        OsBehaviors os = pool.Request<OsBehaviors>();
+
+        if (chrome == null || os == null)
+        {
+            Console.WriteLine("No such behaviors.");
+        }
+        else
+        {
+            os.OpenApp("chrome");
+            chrome.GetUrlText();
+        }
+
+        Console.Read();
     }
 }
+```
+
+The console output should be:
+```
+Korat sends keys: Control, R
+Korat sends string: "chrome".
+Korat sends key: Return.
+Korat sends key: F6.
+Korat sends keys: Control, C
 ```
