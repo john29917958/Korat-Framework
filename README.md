@@ -57,8 +57,28 @@ class Program
         }
         else
         {
+            Console.WriteLine("Before replacing behaviors:");
             os.OpenApp("chrome");
-            chrome.GetUrlText();
+            string url = chrome.GetUrlText();
+        }
+
+        pool.Remove(os);
+        pool.Remove(chrome);
+        pool.Add(new IeBehaviorsPicker(korat, pool).Pick("ie7"));
+        pool.Add(new UbuntuBehaviorsPicker(korat, pool).Pick("16.10"));
+        BrowserBehaviors browser = pool.Request<BrowserBehaviors>();
+        os = pool.Request<OsBehaviors>();
+
+        if (browser == null || os == null)
+        {
+            Console.WriteLine("No such behaviors.");
+        }
+        else
+        {
+            Console.WriteLine();
+            Console.WriteLine("After replacing behaviors:");
+            os.OpenApp("chrome");
+            string url = browser.GetUrlText();
         }
 
         Console.Read();
@@ -68,9 +88,17 @@ class Program
 
 The console output should be:
 ```
+Before replacing behaviors:
 Korat sends keys: Control, R
 Korat sends string: "chrome".
 Korat sends key: Return.
-Korat sends key: F6.
+Korat sends keys: Alt, D
 Korat sends keys: Control, C
+
+After replacing behaviors:
+Korat sends keys: Control, Alt, T
+Korat sends string: "chrome".
+Korat sends key: Return.
+Korat sends key: F6.
+Korat sends keys: Control, Shift, C
 ```
