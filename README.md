@@ -21,6 +21,7 @@ The potential changes in every Korat automation project are listed bellow:
   - For example: Search installed program by keyword:
     - Windows 7: `Win` -> type `keyword`
     - Windows 8: `Win` -> click :mag: -> type `keyword`
+  - Between different application versions, some of the behaviors may be deprecated
 - Distrubution of target application changed
   - For example: Perform "copy - paste" task:
     - Ubuntu 14.1: `Ctrl + Shift + C`
