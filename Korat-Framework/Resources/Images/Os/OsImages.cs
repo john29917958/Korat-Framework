@@ -1,4 +1,4 @@
-﻿namespace KoratFramework.Resources
+﻿namespace KoratFramework.Resources.Images.Os
 {
     public class OsImages
     {

@@ -19,7 +19,7 @@ namespace App
             BehaviorPool pool = new BehaviorPool();
             pool.Add(new WinBehaviorsPicker(korat, pool).Pick("7"));
             pool.Add(new ChromeBehaviorsPicker(korat, pool).Pick("60.0"));
-
+            
             ChromeBehaviors chrome = pool.Request<ChromeBehaviors>();
             OsBehaviors os = pool.Request<OsBehaviors>();
 

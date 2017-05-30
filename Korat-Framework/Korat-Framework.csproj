@@ -57,9 +57,13 @@
     <Compile Include="Pickers\Behaviors\Browser\IeBehaviorsPicker.cs" />
     <Compile Include="Pickers\Behaviors\Os\UbuntuBehaviorsPicker.cs" />
     <Compile Include="Pickers\Behaviors\Os\WinBehaviorsPicker.cs" />
+    <Compile Include="Pickers\Images\Browser\ChromeImagePicker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\BrowserImages.cs" />
-    <Compile Include="Resources\OsImages.cs" />
+    <Compile Include="Resources\Images\Browser\BrowserImages.cs" />
+    <Compile Include="Resources\Images\Browser\Chrome\ChromeImages.cs" />
+    <Compile Include="Resources\Images\Browser\Chrome\ChromeImagesV60.cs" />
+    <Compile Include="Resources\Images\Browser\Ie\IeImages.cs" />
+    <Compile Include="Resources\Images\Os\OsImages.cs" />
     <Compile Include="Version\VersionComparer.cs" />
   </ItemGroup>
   <ItemGroup>
